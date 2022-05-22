@@ -32,11 +32,24 @@ class Tag(models.Model):
 
 class Question(models.Model):
     content = models.TextField()
+    used = models.IntegerField(default=1)
 
     def __str__(self):
-        return self.title
+        return self.content
+
+    def get_answer_label(self):
+        for option in self.options.all():
+            if option.is_correct:
+                return option.label
+        return None
+
+    def options_asdict(self):
+        return {
+            option.label: option.content for option in self.options.all()
+        }
 
     class Meta:
+        ordering = ('used', )
         db_table = "question"
 
 
