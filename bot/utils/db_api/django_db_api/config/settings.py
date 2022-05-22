@@ -125,13 +125,15 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test_master_english',
-        'USER': 'postgres',
-        'PASSWORD': 'uV0zW1oU3jG8qJ1lJ4cJ8pU9fB',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'test_master_english',
+#         'USER': 'postgres',
+#         'PASSWORD': 'uV0zW1oU3jG8qJ1lJ4cJ8pU9fB',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
+
+# from django.contrib.postgres.
