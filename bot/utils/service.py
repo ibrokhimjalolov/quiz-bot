@@ -74,6 +74,8 @@ class TestChecker:
         self.score = -1
         self.user_id = user_id
         a = txt.split()
+        self.code = -1
+        self.keys = ''
         if len(a) != 2 or not len(a[1]) != 30:
             return
         self.code = a[0]
